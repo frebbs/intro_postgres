@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookmarks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<section class="main-section">
+  <h2>Bookmark List</h2>
+  <div class="divider"></div>
+  <% @bookmarks.each do |bookmark| %>
+    <div class="section" id="bookmark-<%= bookmark.id %>">
+      <h4> <span class="title"><%= bookmark.title %></span></h4>
+      <p><a href="<%= bookmark.url %>" target="_blank">Visit Bookmark</a></p>
+      <form action="/bookmarks/<%= bookmark.id %>" method="post">
+        <input type='hidden' name='_method' value='DELETE'/>
+        <input type="submit" class="bookmark" value="Delete" />
+      </form>
+    </div>
+  <% end %>
+  <div class="divider"></div>
+  <a class="btn my-btn" href="/add-bookmark">Add Bookmark </a>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

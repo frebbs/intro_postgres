@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add a new bookmark</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+
+<section class="main-section">
+  <div class="row">
+    <div class="center-section">
+      <form class="col s12" action="/create-new-bookmark" method="post">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="example: Google" id="name" type="text" name="title"class="validate" required>
+            <label for="name">Bookmark name</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="example: http://www.google.com" name="url" id="url" type="url" class="validate" required>
+            <label for="url">Address of bookmark</label>
+          </div>
+        </div>
+
+        <input class="btn my-btn" type="submit" value="Submit" />
+        <a class="btn my-btn" href="/">Home </a>
+
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

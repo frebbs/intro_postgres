@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-section {
+    height: 100vh;
+    background-color: rgb(39, 41, 68);
+    font-family: sans-serif;
+}
+
+.center-section {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+.bookmarks {
+    width: 400px;
+    height: 400px;
+}
+
+
+
+.my-btn {
+
+    margin: 10px;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    background: rgb(97, 29, 71);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.my-btn:focus {
+    outline: none;
+}
